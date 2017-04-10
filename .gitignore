@@ -19,9 +19,6 @@ local.config.yml # use this for your local changes!
 # config.yml # keep this for the team!
 drupal.make.yml
 Vagrantfile.local
-examples/prod/inventory
-examples/prod/bootstrap/vars.yml
-scripts/
 drupal/
 
 # Some roles include 'config.yml' files.
