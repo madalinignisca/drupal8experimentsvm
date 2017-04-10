@@ -2,6 +2,16 @@ vagrant_hostname: drupal8.dev
 vagrant_machine_name: drupal8
 vagrant_ip: 0.0.0.0
 
+vagrant_synced_folder_default_type: virtualbox
+vagrant_synced_folders:
+  # The first synced folder will be used for the default Drupal installation, if
+  # any of the build_* settings are 'true'. By default the folder is set to
+  # the drupal-vm folder.
+  - local_path: .
+    destination: /var/www/drupalvm
+    type: virtualbox
+    create: true
+
 force_ansible_local: true
 
 drupal_build_composer_project: false
@@ -36,4 +46,4 @@ solr_cores: [] # do not touch this or solr provision will fail!
 solr_version: "6.5.0"
 
 post_provision_scripts:
-  - "../scripts/configure-solr.sh"
+  - "../scripts/solr-drupal8.sh"
