@@ -1,0 +1,39 @@
+vagrant_hostname: drupal8.dev
+vagrant_machine_name: drupal8
+vagrant_ip: 0.0.0.0
+
+force_ansible_local: true
+
+drupal_build_composer_project: false
+drupal_install_site: false
+
+installed_extras:
+  - adminer
+  # - blackfire
+  - drupalconsole
+  - drush
+  # - elasticsearch
+  # - java
+  - mailhog
+  - memcached
+  # - newrelic
+  - nodejs
+  - pimpmylog
+  # - redis
+  # - ruby
+  # - selenium
+  - solr
+  # - tideways
+  # - upload-progress
+  - varnish
+  - xdebug
+  - xhprof
+
+php_version: "7.0"
+
+solr_cores: [] # do not touch this or solr provision will fail!
+
+solr_version: "6.5.0"
+
+post_provision_scripts:
+  - "../scripts/configure-solr.sh"

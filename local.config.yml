@@ -1,0 +1,5 @@
+vagrant_memory: 8096
+vagrant_cpus: 2
+
+solr_xms: "256M"
+solr_xmx: "512M"
